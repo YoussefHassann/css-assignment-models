@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    display: grid;
+    width: 95%;
+    height: 200vh;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10px auto auto auto ;
+    background-color: rgb(246, 19, 19);
+    grid-gap: 0px 0px;
+    border: 2px solid black;
+    position: relative;
+    grid-template-areas:
+    "nav nav"
+    "header header"
+    "aside main"
+    "footer footer"
+}
+
+nav{
+    grid-area: nav ;
+    height: 33px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0.464);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: sticky; 
+    top: 0px;
+    padding-top: 10px;
+    padding-left: 0;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+
+}
+nav ul li{
+    display: inline;
+    width: 79px;
+    height: 30px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight:lighter;
+    padding: 15px 18px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+    opacity: 100%;
+}
+
+header{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    grid-area: header;
+    background-color: rgba(220, 114, 114, 0.025);
+    width: 100%;
+    color: white;
+}
+
+header ul h1 {
+    font-size: 50px;
+    color: white;
+    padding: 25px;
+
+}
+header ul h3{
+    color: white;
+    padding: 40px;
+}
+
+header ul a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 0px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 15px;
+    opacity: 100%;
+}
+.aside{
+    position: relative;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    text-align: left;
+    grid-area: aside;
+    background-color: white;
+    width: 100%;
+}
+.aside h2,p{
+    padding-left: 200px;
+    padding-top: 50px;
+}
+main{
+   
+    grid-area: main;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    padding-top: 150px;
+    padding-left: 50px;
+    align-items: start;
+}
+/* main img{
+    position: absolute;
+    padding: left 0;
+    padding-top: 0;
+} */
+footer{
+    grid-area: footer ;
+    border: 3px solid black;
+    background-color: greenyellow;
+    width: 100%;
+}
